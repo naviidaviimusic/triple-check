@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "triple-check"
+version = "0.1.0"
+description = "Stop local LLMs making up numbers: Python does the math, two experts explain it, a different model verifies every figure against a fact base."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Victor Navejar (Navii)" }]
+keywords = ["llm", "ollama", "fact-checking", "hallucination", "local-llm", "agents", "grounding"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+triple-check = "triple_check.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/naviidaviimusic/triple-check"
+
+[tool.setuptools]
+packages = ["triple_check", "triple_check.domains"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 115
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["UP006", "UP035"]
