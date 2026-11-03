@@ -98,9 +98,12 @@ See [`triple_check/domains/tequila.py`](triple_check/domains/tequila.py) for a c
 ## Install
 
 ```bash
-pip install git+https://github.com/naviidaviimusic/triple-check
+pip install triple-check-verify
 ollama pull qwen2.5:3b && ollama pull llama3.2
 ```
+
+(On PyPI the package is named `triple-check-verify` — `triple-check` was too
+similar to an existing project. The command it installs is still `triple-check`.)
 
 ```
 triple-check "question"                    ask the cell
