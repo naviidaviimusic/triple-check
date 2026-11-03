@@ -3,8 +3,8 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "triple-check"
-version = "0.1.0"
+name = "triple-check-verify"
+version = "0.1.1"
 description = "Stop local LLMs making up numbers: Python does the math, two experts explain it, a different model verifies every figure against a fact base."
 readme = "README.md"
 requires-python = ">=3.9"
